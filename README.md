@@ -57,9 +57,11 @@ using namespace std;
 int
 main()
 {
+    mraa_add_subplatform(MRAA_GROVEPI, "0");
+    
     //! [Interesting]
-    // Instantiate a rotary sensor on analog pin A0
-    upm::GroveRotary knob(0);
+    // Instantiate a rotary sensor on analog pin A2
+    upm::GroveRotary knob(514);
 
     // Print sensor name to confirm it initialized properly
     cout << knob.name() << endl;
